@@ -34,13 +34,22 @@ module aft_joint(length)
         
     translate([dt_adj,0,0])
     rotate([0,90,90])
-
+/*
+    module dovetail(bx,
+                bh,
+                sx,
+                sh,
+                width,
+                height,
+                dt_angle)
+*/
     dovetail(RAIL_WIDTH,
              RAIL_DOVETAIL_X,
              RAIL_DOVETAIL_X,
              RAIL_HEIGHT,
              width,
-             height);
+             height,
+             DOVETAIL_ANGLE);
 
     // Check to see if we need to cut away
     // any material
@@ -119,11 +128,23 @@ module bow_joint(length)
     dt_adj = round(RAIL_DOVETAIL_X /
                    tan(DOVETAIL_ANGLE));    
     x = length+(dt_adj-DOVETAIL_LAND);
+/*
+    module dovetail(bx,
+                bh,
+                sx,
+                sh,
+                width,
+                height,
+                dt_angle)
+*/
 
     translate([x+DOVETAIL_GLUE,0,0])
     rotate([0,90,90])
     dovetail(RAIL_WIDTH,
              RAIL_DOVETAIL_X,
              RAIL_DOVETAIL_X,
-             RAIL_HEIGHT);
+             RAIL_HEIGHT,
+             RAIL_WIDTH,
+             RAIL_HEIGHT,
+             DOVETAIL_ANGLE);
 }
