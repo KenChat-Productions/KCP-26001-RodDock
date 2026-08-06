@@ -36,7 +36,7 @@
 include <dimensions.scad>;
 include <rod_holder_profile.scad>;
 include <compensation.scad>;
-use <../../KCP-Common/OpenSCAD/dovetail.scad>;
+use <../Common/OpenSCAD/dovetail.scad>;
 
 /*
  * ------------------------------------------

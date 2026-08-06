@@ -30,7 +30,7 @@
  * -------------------------------------------------
 */
 include <dimensions.scad>;
-include <../../KCP-Common/OpenSCAD/rounded_rect.scad>
+include <../Common/OpenSCAD/rounded_rect.scad>
 
 /*
  * -------------------------------------------------

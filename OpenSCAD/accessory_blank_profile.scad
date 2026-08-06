@@ -12,7 +12,7 @@
  *  2026-07-28  Initial Creation
  * ---------------------------------------------------
 */
-include <../../KCP-Common/OpenSCAD/rounded_rect.scad>;
+include <..\Common\OpenSCAD/rounded_rect.scad>;
 
 module accessory_blank_profile(x, y, rounded=true)
 {

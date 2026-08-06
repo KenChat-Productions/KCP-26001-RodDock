@@ -34,10 +34,10 @@
  * ---------------------------------------
  *
 */
-include <../../KCP-Common/OpenSCAD/hardware.scad>;
+include <../Common/OpenSCAD/hardware.scad>;
 include <rail_profile.scad>;
 include <connectors.scad>;
-use <../../KCP-Common/OpenSCAD/dovetail.scad>;
+use <../Common/OpenSCAD/dovetail.scad>;
 use <compensation.scad>;
 
 

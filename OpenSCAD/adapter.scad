@@ -42,9 +42,9 @@
  * ---------------------------------------------------
 */
 include <dimensions.scad>;
-include <../../KCP-Common/OpenSCAD/hardware.scad>;
+include <../Common/OpenSCAD/hardware.scad>;
 include <adapter_profile.scad>;
-use <../../KCP-Common/OpenSCAD/dovetail.scad>;
+use <../Common/OpenSCAD/dovetail.scad>;
 
 module adapter(length=ADAPTER_DEFAULT_LENGTH,
                dovetail=true)

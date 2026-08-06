@@ -48,9 +48,9 @@
 */
 
 include <dimensions.scad>;
-include <../../KCP-Common/OpenSCAD/hardware.scad>;
+include <..\Common\OpenSCAD/hardware.scad>;
 include <accessory_blank_profile.scad>;
-use <../../KCP-Common/OpenSCAD/dovetail.scad>;
+use <..\Common\OpenSCAD/dovetail.scad>;
 
 // -------------------------
 // structural body
