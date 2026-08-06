@@ -122,5 +122,6 @@ module dovetail_cut()
     dovetail(accessory_body_width,RAIL_DOVETAIL_X,
              RAIL_DOVETAIL_X, accessory_body_height,
              accessory_body_width,
-             accessory_body_height);
+             accessory_body_height,
+             DOVETAIL_ANGLE);
 }
