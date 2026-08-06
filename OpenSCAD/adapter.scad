@@ -86,10 +86,13 @@ module dovetail_cut(length)
     translate([x,0,0])
     rotate([90,270,180])
     color("green")
-    dovetail(width,RAIL_DOVETAIL_X,
-             RAIL_DOVETAIL_X, height,
+    dovetail(width,
+             RAIL_DOVETAIL_X,
+             RAIL_DOVETAIL_X,
+             height,
              width,
-             height);
+             height,
+             DOVETAIL_ANGLE);
 }
 module screw_hole(length)
 {
