@@ -192,8 +192,11 @@ module rail_connector(x, y, z)
     tx = (x/2);
     ty = (y/2)+DOVETAIL_LAND;
     translate([0,-DEFAULT_RECT_RADIUS,0])
-    dovetail(x,RAIL_DOVETAIL_X,
-             RAIL_DOVETAIL_X, z,
+    dovetail(x,
+             RAIL_DOVETAIL_X,
+             RAIL_DOVETAIL_X,
+             z,
              x,
-             z);
+             z,
+             DOVETAIL_ANGLE);
 }
