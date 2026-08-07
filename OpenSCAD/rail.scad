@@ -228,7 +228,7 @@ module cut_bow_groove(length)
 
     color("orange")
     translate([x,y,-z_pos+DOVETAIL_GLUE])
-    build_compensation(RAIL_DOVETAIL_X +
+    build_block_compensation(RAIL_DOVETAIL_X +
                        RAIL_GROOVE_HEIGHT,
                        RAIL_GROOVE_HEIGHT,
                        z-DOVETAIL_GLUE);

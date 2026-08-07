@@ -20,7 +20,7 @@
 /*
  * build a cube for the requester
 */
-module build_compensation(width, depth, height)
+module build_block_compensation(width, depth, height)
 {
     cube([width, depth, height]);
 }

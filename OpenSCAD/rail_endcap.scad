@@ -180,25 +180,25 @@ module cut_anchor_cap(length)
     tz = RAIL_WIDTH;
     translate([tx,0,-tz])
     color("purple")
-    build_compensation(BUNGEE_GROOVE_WIDTH,
+    build_block_compensation(BUNGEE_GROOVE_WIDTH,
                        by,
                        RAIL_WIDTH);
 
     translate([tx,ty,-tz])
     color("purple")
-    build_compensation(BUNGEE_GROOVE_WIDTH,
+    build_block_compensation(BUNGEE_GROOVE_WIDTH,
                        by,
                        RAIL_WIDTH);
     
     translate([tx,by,-BUNGEE_GROOVE_WIDTH])
     color("orange")
-    build_compensation(BUNGEE_GROOVE_WIDTH,
+    build_block_compensation(BUNGEE_GROOVE_WIDTH,
                        by,
                        BUNGEE_GROOVE_WIDTH);
 
     translate([tx,by,-RAIL_WIDTH])
     color("blue")
-    build_compensation(BUNGEE_GROOVE_WIDTH,
+    build_block_compensation(BUNGEE_GROOVE_WIDTH,
                        by,
                        BUNGEE_GROOVE_WIDTH);
 }

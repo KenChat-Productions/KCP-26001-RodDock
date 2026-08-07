@@ -120,7 +120,7 @@ module backfill(x, y, z)
     // Try RND_RECT_OFFSET if _LAND is not good
     dy = floor(dt_depth)-DOVETAIL_LAND;
     color("purple")
-    build_compensation(x, dy, z);
+    build_block_compensation(x, dy, z);
 }
 /*
  * ------------------------------
