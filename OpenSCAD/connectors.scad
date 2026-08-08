@@ -120,16 +120,6 @@ module bow_joint(length,rounded=false)
     dt_adj = round(RAIL_DOVETAIL_X /
                    tan(DOVETAIL_ANGLE));    
     x = length+(dt_adj-DOVETAIL_LAND);
-/*
-    module dovetail(bx,
-                bh,
-                sx,
-                sh,
-                width,
-                height,
-                dt_angle)
-*/
-
     translate([x+DOVETAIL_GLUE,0,0])
     rotate([0,90,90])
     dovetail(RAIL_WIDTH,
