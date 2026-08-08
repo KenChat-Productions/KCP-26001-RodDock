@@ -48,8 +48,8 @@
 */
 
 include <dimensions.scad>;
-include <..\Common\OpenSCAD/hardware.scad>;
 include <accessory_blank_profile.scad>;
+include <..\Common\OpenSCAD/hardware.scad>;
 use <..\Common\OpenSCAD/dovetail.scad>;
 
 // -------------------------
@@ -103,9 +103,9 @@ module accessory_stock()
     // width  = aft to bow
     // height = deck to sky
     linear_extrude(height=accessory_body_height)
-    accessory_blank_profile(accessory_body_length,
-                accessory_body_width, rounded = false);
-
+        accessory_blank_profile(accessory_body_length,
+                                accessory_body_width,
+                                rounded=false);
 }
 
 module dovetail_cut()
@@ -123,5 +123,7 @@ module dovetail_cut()
              RAIL_DOVETAIL_X, accessory_body_height,
              accessory_body_width,
              accessory_body_height,
-             DOVETAIL_ANGLE);
+             DOVETAIL_ANGLE,
+             DEFAULT_RECT_RADIUS,
+             DOVETAIL_LAND,false);
 }
