@@ -92,7 +92,10 @@ module dovetail_cut(length)
              height,
              width,
              height,
-             DOVETAIL_ANGLE);
+             DOVETAIL_ANGLE,
+             DEFAULT_RECT_RADIUS,
+             DOVETAIL_LAND,
+             false);
 }
 module screw_hole(length)
 {
