@@ -198,5 +198,8 @@ module rail_connector(x, y, z)
              z,
              x,
              z,
-             DOVETAIL_ANGLE);
+             DOVETAIL_ANGLE,
+             DEFAULT_RECT_RADIUS,
+             DOVETAIL_LAND,
+             false);
 }
