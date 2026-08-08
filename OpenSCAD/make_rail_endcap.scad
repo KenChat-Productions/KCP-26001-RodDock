@@ -37,6 +37,7 @@ include <rail_endcap.scad>;
  * Crreate the anchor endcaps
  * -----------------------------
 */
+
 rail_endcap(25,
             location=RAIL_ENDCAP_BOW,
             rounded=true);
@@ -44,8 +45,9 @@ rail_endcap(25,
 translate([50,0,0])
     rail_endcap(25,
                 location=RAIL_ENDCAP_AFT,
-                rounded=false);
-                
+                rounded=true);
+
+
 /*
  * -----------------------------
  * Crreate the fixed endcaps
@@ -55,8 +57,7 @@ translate([0,40,0])
     rail_endcap(25,
                 location=RAIL_ENDCAP_AFT,
                 type=RAIL_ENDCAP_FIXED,
-                rounded=false);
-                
+                rounded=true);
 translate([50,40,0])
 rail_endcap(25,
             location=RAIL_ENDCAP_BOW,

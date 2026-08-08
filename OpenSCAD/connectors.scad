@@ -24,7 +24,7 @@ include <dimensions.scad>;
 //  height = deck to sky
 // --------------------------------------
 //
-module aft_joint(length)
+module aft_joint(length,rounded=false)
 {
     dt_adj = round(RAIL_DOVETAIL_X /
                 tan(DOVETAIL_ANGLE));
@@ -34,22 +34,14 @@ module aft_joint(length)
         
     translate([dt_adj,0,0])
     rotate([0,90,90])
-/*
-    module dovetail(bx,
-                bh,
-                sx,
-                sh,
-                width,
-                height,
-                dt_angle)
-*/
     dovetail(RAIL_WIDTH,
              RAIL_DOVETAIL_X,
              RAIL_DOVETAIL_X,
              RAIL_HEIGHT,
              width,
              height,
-             DOVETAIL_ANGLE);
+             DOVETAIL_ANGLE,
+             crn_round=rounded);
 
     // Check to see if we need to cut away
     // any material
@@ -122,7 +114,7 @@ module aft_compensation(height,width,dt_adj)
  * --------------------------------------
  *
 */
-module bow_joint(length)
+module bow_joint(length,rounded=false)
 {
     //echo("bow_joint - length: ", length);
     dt_adj = round(RAIL_DOVETAIL_X /
@@ -146,5 +138,8 @@ module bow_joint(length)
              RAIL_HEIGHT,
              RAIL_WIDTH,
              RAIL_HEIGHT,
-             DOVETAIL_ANGLE);
+             DOVETAIL_ANGLE,
+             DEFAULT_RECT_RADIUS,
+			 DOVETAIL_LAND,
+			 rounded);
 }

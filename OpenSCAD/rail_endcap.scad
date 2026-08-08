@@ -155,7 +155,7 @@ module rail_endcap_aft(x, y, length,rounded)
     union()
     {
         rail_endcap_stock(x,y,length,rounded);
-        bow_joint(length);
+        bow_joint(length,rounded);
     }
 }
 /*
