@@ -1,10 +1,11 @@
 /*
- * --------------------------------
- * KCP-RD000-RodDock
- * --------------------------------
+ * ---------------------------------------------
+ * KCP-26001-RodDock
+ * ---------------------------------------------
  * File: 
  *  accessory_lank.scad
  *
+ * ---------------------------------------------
  * Responsibility:
  *  Defines the RodDock Rail Blank Accessory
  *
@@ -29,14 +30,17 @@
  *
  *  Changing them changes compatibility.
  *
+ * ---------------------------------------------
  * Public Module(s):
  *  accessory()
  *
+ * ---------------------------------------------
  * Dependencies:
  *  dimensions.scad
  *  hardware.scad
  *  dovetail_connector
  *
+ * ---------------------------------------------
  * Revisions:
  *  2026-07-06  Initial Creation
  *  2026-07-08  renamed to accessory_base
@@ -45,6 +49,7 @@
  *              component.
  *  2026-07-29  Renamed to accessory_blank to 
  *              reflect its usage
+ * ---------------------------------------------
 */
 
 include <dimensions.scad>;

@@ -1,3 +1,23 @@
+/*
+ * ----------------------------------------------
+ * KCP-26001-RodDock
+ * ----------------------------------------------
+ * File: connectors.scad
+ *
+ * ----------------------------------------------
+ * Responsibility:
+ *  creates aft and bow "joints" for the
+ *  rail and encap
+ *
+ * ----------------------------------------------
+ * Public Constraints:
+ *
+ * The RodDock Dovetail Interface is defined in
+ * dimensions.scad.
+ *
+ * Changing those dimensions changes compatibility
+ * between adapters and accessories.
+*/
 include <dimensions.scad>;
 
 // --------------------------------------

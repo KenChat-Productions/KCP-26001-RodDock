@@ -1,10 +1,11 @@
 /*
- * --------------------------------
- * KCP-RD000-RodDock
- * --------------------------------
+ * -----------------------------------------------------
+ * KCP-26001-RodDock
+ * -----------------------------------------------------
  * File: 
  *  adapter.scad
  *
+ * -----------------------------------------------------
  * Responsibility:
  *  Defines the RodDock Rail Adapter
  *
@@ -20,20 +21,24 @@
  * All adapter implementations should preserve this
  * relationship while allowing engineering optimization.
  *
+ * -----------------------------------------------------
  * Public Constraints:
  *  These dimensions are defined by the RodDock
  *  Rail Interface and are not adapter specific.
  *
  *  Changing them changes compatibility.
  *
+ * -----------------------------------------------------
  * Public Module(s):
  *  adapter()
  *
+ * -----------------------------------------------------
  * Dependencies:
  *  dimensions.scad
  *  hardware.scad
  *  adapater_profile.scad
  *
+ * -----------------------------------------------------
  * Revisions:
  *  2026-06-30  Initial Creation
  *  2026-06-30  Renamed carriage to adapter
