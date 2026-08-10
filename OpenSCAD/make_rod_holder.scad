@@ -19,13 +19,11 @@
 
 include <rod_holder.scad>;
 
-/* Redfined radii
+/* Defined radii
  *  RODSLOT_RADIUS_12
  *  RODSLOT_RADIUS_13
  *  RODSLOT_RADIUS_14
 */
-
-
 translate([0,-40,0])
 rod_holder(radius=RODSLOT_RADIUS_12);
 

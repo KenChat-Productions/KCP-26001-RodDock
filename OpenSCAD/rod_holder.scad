@@ -88,7 +88,8 @@ module rod_holder(x=RODHLDR_DEFAULT_X,
 module rod_holder_stock(x,y,z,radius)
 {
     linear_extrude(z)
-        rod_holder_profile(x,y,radius);
+        rod_holder_profile(x,y,radius,
+                            DEFAULT_RECT_RADIUS);
     /*
      *  Close off the back curved corners
      *  Thia must happen here, otherwise
