@@ -35,3 +35,12 @@ include <rail.scad>;
     RAIL_L_LENGTH
 */
 rail(RAIL_XS_LENGTH);
+
+translate([120,0,0])
+rail(RAIL_S_LENGTH);
+
+translate([0,50,0])
+rail(RAIL_M_LENGTH);
+
+translate([0,-50,0])
+rail(RAIL_L_LENGTH);

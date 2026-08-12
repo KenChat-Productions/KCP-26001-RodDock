@@ -61,10 +61,12 @@ module rail(length)
     /*
      * This rotation is for the .stl file
      * used on a bambu labs printer
-    */
+     * Currently all rails are produced
+     * without any rotation from make_rail
     y = (length == RAIL_L_LENGTH) ? 47 : 
         (length == RAIL_M_LENGTH) ? 50 : 0;
     rotate([90,0,y])
+    */
     difference()
     {
         union()
