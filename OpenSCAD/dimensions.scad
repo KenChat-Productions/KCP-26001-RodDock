@@ -70,6 +70,7 @@ RAIL_DT_OFFSET          =   5.00;
 PRIMARY_SCREW_OFFSET    =  25.40;
 RAIL_TAB_WIDTH          = (RAIL_WIDTH -
                            RAIL_GROOVE_WIDTH)/2;
+RAIL_DFLT_RADIUS        =   4.00;
 // Default Width for the dovetail face on the rail
 RAIL_DOVETAIL_X         =   8.00;
 

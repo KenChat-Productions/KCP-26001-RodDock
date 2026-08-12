@@ -61,6 +61,8 @@ module aft_joint(length,rounded=false)
              width,
              height,
              DOVETAIL_ANGLE,
+             DEFAULT_RECT_RADIUS,
+             DOVETAIL_LAND,
              crn_round=rounded);
 
     // Check to see if we need to cut away

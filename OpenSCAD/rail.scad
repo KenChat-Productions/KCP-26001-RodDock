@@ -40,7 +40,10 @@ include <connectors.scad>;
 use <../Common/OpenSCAD/dovetail.scad>;
 use <compensation.scad>;
 
-
+/* =======================================
+ *              MODULES 
+ * =======================================
+*/
 /*
  * --------------------------------------
  * module: rail
@@ -53,7 +56,7 @@ use <compensation.scad>;
  *  length = Extruded length of the rail.
  *
 */
-module rail(length,rounded=true)
+module rail(length)
 {
     /*
      * This rotation is for the .stl file
@@ -72,12 +75,13 @@ module rail(length,rounded=true)
                            RAIL_HEIGHT,
                            RAIL_GROOVE_WIDTH,
                            RAIL_GROOVE_HEIGHT,
-                           length,
-                           rounded);
+                           length);
                 mounting_holes(length);
+                color("red")
                 aft_joint(length);
             }
-            bow_joint(length);
+            color("green")
+            bow_joint(length,true);
         }
         cut_bow_groove(length);
     }
@@ -95,11 +99,13 @@ module rail(length,rounded=true)
  * --------------------------------------
  *
 */
-module rail_stock(rx, ry, cx, cy, length, rounded)
+module rail_stock(rx, ry, cx, cy, length)
 {
     rotate([0,90,0])
     linear_extrude(height = length)
-        rail_profile(rx, ry, cx, cy, rounded);
+        rail_profile(rx, ry, cx, cy,
+                     DEFAULT_RECT_RADIUS,
+                     RAIL_DFLT_RADIUS);
 }
 // --------------------------------------
 // module: mounting hole

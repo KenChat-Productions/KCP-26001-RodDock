@@ -40,6 +40,7 @@
 */
 include <dimensions.scad>;
 include <../Common/OpenSCAD/rounded_rect.scad>
+include <..\Common\OpenSCAD\corner_cutter.scad>;
 
 /*
  * -------------------------------------------------
@@ -53,7 +54,9 @@ include <../Common/OpenSCAD/rounded_rect.scad>
  * a rail section.
  * -------------------------------------------------
 */
-module rail_profile(rx, ry, cx, cy, rounded=true)
+module rail_profile(rx, ry, cx, cy,
+                    base_radius,
+                    rail_radius)
 {
     gx = (rx - cx) / 2;
     gy = ry - cy;
@@ -62,12 +65,26 @@ module rail_profile(rx, ry, cx, cy, rounded=true)
     {
         // Get the basic rail shape
         rect_outline(rx, ry,
-                     DEFAULT_RECT_RADIUS,
-                     rounded);
+                     base_radius,
+                     false);
         
-            // Cut the groove
+        // Cut the groove
         translate([gx, gy])
             square([cx,
                     cy]);
+        
+        // Round the top corner
+        tx = rail_radius;
+        ty1 = ry - rail_radius;
+        translate([tx,ty1,0])
+        rotate([0,0,90])
+        color("red")
+        corner_cutter(rail_radius);
+        
+        // Round the bottom corner
+        ty2 = rail_radius;
+        translate([tx,ty2,0])
+        rotate([0,0,180])
+        corner_cutter(rail_radius);
     }
 }

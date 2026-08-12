@@ -34,4 +34,4 @@ include <rail.scad>;
     RAIL_M_LENGTH
     RAIL_L_LENGTH
 */
-rail(RAIL_XS_LENGTH,false);
+rail(RAIL_XS_LENGTH);
