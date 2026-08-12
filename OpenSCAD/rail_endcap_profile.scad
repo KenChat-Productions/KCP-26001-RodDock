@@ -43,6 +43,12 @@ include <../Common/OpenSCAD/rounded_rect.scad>
  * Returns the 2D profile used to construct the 
  * a rail end section.
  * -------------------------------------------------
+ * Parameters
+ *  x = square x-axis
+ *  y = square y-axis
+ *  rounded = (boolean) whether or not to round the 
+ *              corners. True by default.
+ * -------------------------------------------------
 */
 module rail_endcap_profile(x, y, rounded=true)
 {
