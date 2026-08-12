@@ -91,7 +91,6 @@ module aft_compensation(height,width,dt_adj)
     if(height != RAIL_HEIGHT)
     {
         // Top Ledge
-        color("purple")
         translate([0,height,-RAIL_WIDTH])
         build_block_compensation(dt_adj,
                            h,
@@ -100,14 +99,12 @@ module aft_compensation(height,width,dt_adj)
     if(width != RAIL_WIDTH)
     {
         // boat side
-        color("purple")
         translate([0,0,-h/2])        
         build_block_compensation(dt_adj,
                            RAIL_HEIGHT,
                            h/2);
 
         // rail side
-        color("purple")
         translate([0,0,-(width+h/2)])        
         build_block_compensation(dt_adj,
                            RAIL_HEIGHT,
