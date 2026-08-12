@@ -54,19 +54,15 @@ use <compensation.scad>;
  * --------------------------------------
  * Parameters:
  *  length = Extruded length of the rail.
- *
+ * --------------------------------------
+ * NOTE:
+ *  for version 1, the rail is a fixed,
+ *  standard size. This may change in
+ *  a future version.
+ * --------------------------------------
 */
 module rail(length)
 {
-    /*
-     * This rotation is for the .stl file
-     * used on a bambu labs printer
-     * Currently all rails are produced
-     * without any rotation from make_rail
-    y = (length == RAIL_L_LENGTH) ? 47 : 
-        (length == RAIL_M_LENGTH) ? 50 : 0;
-    rotate([90,0,y])
-    */
     difference()
     {
         union()
@@ -79,10 +75,8 @@ module rail(length)
                            RAIL_GROOVE_HEIGHT,
                            length);
                 mounting_holes(length);
-                color("red")
                 aft_joint(length);
             }
-            color("green")
             bow_joint(length,true);
         }
         cut_bow_groove(length);
@@ -151,16 +145,13 @@ module mounting_holes(length)
     center = length / 2;
     
     // Aft hole
-    color("red")
     drill_hole(left,M4_WOODSCREW_DIAMETER,true);
     if (length ==  RAIL_L_LENGTH)
     {        
         // Middle hole
-        color("blue");
         drill_hole(center,M4_WOODSCREW_DIAMETER,true);
     }
     // Bow hole
-    color("green")
     drill_hole(right,M4_WOODSCREW_DIAMETER,true);
 }
 /*
@@ -234,11 +225,9 @@ module cut_bow_groove(length)
     z = ((RAIL_WIDTH - RAIL_GROOVE_WIDTH) / 2);
     z_pos = ((RAIL_WIDTH - RAIL_GROOVE_WIDTH) / 2)*2;
 
-    color("orange")
     translate([x,y,-z_pos+DOVETAIL_GLUE])
     build_block_compensation(RAIL_DOVETAIL_X +
                        RAIL_GROOVE_HEIGHT,
                        RAIL_GROOVE_HEIGHT,
                        z-DOVETAIL_GLUE);
 }
-
