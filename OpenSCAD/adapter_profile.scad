@@ -29,41 +29,49 @@ tang_width        = RAIL_GROOVE_WIDTH -
                         ASSEMBLY_HORIZONTAL_CLEARANCE;
 //tang_engagement   = 6.00;
 tang_engagement   = 5.00;
-// -------------------------
-// top jaw
-// -------------------------
-// Represented the adapter from the face
-// to the end of the tang width
+/*
+ * -------------------------
+ * top jaw
+ * -------------------------
+ * Represented the adapter from the face
+ * to the end of the tang width
+*/
 // Clearance is handed by the tang width
 top_jaw_width     = RAIL_TAB_WIDTH + tang_width;
 top_jaw_thickness = 3.00;
 
-// -------------------------
-// bottom jaw
-// -------------------------
+/*
+ * -------------------------
+ * bottom jaw
+ * -------------------------
+*/
 bottom_jaw_width     = RAIL_WIDTH -
                         ASSEMBLY_HORIZONTAL_CLEARANCE;
 bottom_jaw_thickness = 4.00;
 
-// -------------------------
-// structural body
-// -------------------------
-// It must be tall enough to allow the tang
-// to clear the top of the rail during assembly.
-// width
+/*
+ * -------------------------
+ * structural body
+ * -------------------------
+ * It must be tall enough to allow the tang
+ * to clear the top of the rail during assembly.
+ * width
+*/
 structural_body_width = MINIMUM_STRUCTURAL_WIDTH;
 // height
 structural_body_height  = RAIL_HEIGHT +
                           tang_height +
                           ASSEMBLY_VERTICAL_CLEARANCE;
 
-// -------------------------
-// clamp opening
-// Rough out cut
-// Removes the primary clamp
-// opening while leaving
-// stock for the tang.
-// -------------------------
+/*
+ * -------------------------
+ * clamp opening
+ * Rough out cut
+ * Removes the primary clamp
+ * opening while leaving
+ * stock for the tang.
+ * -------------------------
+*/
 clamp_opening_top = top_jaw_thickness +
                     tang_engagement;
 clamp_opening_width  = top_jaw_width;
