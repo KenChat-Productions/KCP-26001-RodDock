@@ -40,11 +40,6 @@ include <..\Common\OpenSCAD\corner_cutter.scad>;
  * ==========================================
 */
 /*
- * ==========================================
- *               MODULES
- * ==========================================
-*/
-/*
  * ------------------------------------------
  * module: rod_holder_profile
  * ------------------------------------------
@@ -112,10 +107,9 @@ module square_profile(x, y,slot_radius,crn_radius)
         translate([x/2,y/2,0])
         union()
         {
-            color("green")
             circle(slot_radius);
-            translate([-slot_radius,-RND_RECT_OFFSET,0])
-            color("green")
+            translate([-slot_radius,
+                       -RND_RECT_OFFSET,0])
             rect_outline(d,y,crn_radius,false);
         }
     }
@@ -141,12 +135,8 @@ module square_profile(x, y,slot_radius,crn_radius)
 */
 module round_profile(x, y, radius, crn_radius)
 {
-    //  tx
-    //  12 = radius + 1
-    //  13 = radius
-    //  14 = radius - 1
-    x_adj = (radius == RODSLOT_RADIUS_12) ? 1 :
-            (radius == RODSLOT_RADIUS_13) ? 0 :
+    x_adj = (radius == RODSLOT_RADIUS_12) ?  1 :
+            (radius == RODSLOT_RADIUS_13) ?  0 :
             (radius == RODSLOT_RADIUS_14) ? -1 :
              0;
     d = radius * 2;
@@ -171,10 +161,8 @@ module round_profile(x, y, radius, crn_radius)
         translate([x/2,y/2,0])
         union()
         {
-            color("green")
             circle(radius);
             translate([-radius,-RND_RECT_OFFSET,0])
-            color("blue")
             rect_outline(d,y,crn_radius,true);
         }
     }
