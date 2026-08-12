@@ -43,6 +43,11 @@ include <../Common/OpenSCAD/rounded_rect.scad>
 include <..\Common\OpenSCAD\corner_cutter.scad>;
 
 /*
+ * ==========================================
+ *               MODULES
+ * ==========================================
+*/
+/*
  * -------------------------------------------------
  * module: rail_profile
  * -------------------------------------------------
@@ -52,6 +57,14 @@ include <..\Common\OpenSCAD\corner_cutter.scad>;
  *
  * Returns the 2D profile used to construct the 
  * a rail section.
+ * -------------------------------------------------
+ * Parameters
+ *  rx          = rail x-axis
+ *  ry          = rail y-axis
+ *  cx          = cut  x-axis
+ *  cy          = cut  y-axis
+ *  base_radius = radius of the base rectangle
+ *  rail_radius = raidus of the rail face
  * -------------------------------------------------
 */
 module rail_profile(rx, ry, cx, cy,
@@ -78,7 +91,6 @@ module rail_profile(rx, ry, cx, cy,
         ty1 = ry - rail_radius;
         translate([tx,ty1,0])
         rotate([0,0,90])
-        color("red")
         corner_cutter(rail_radius);
         
         // Round the bottom corner
