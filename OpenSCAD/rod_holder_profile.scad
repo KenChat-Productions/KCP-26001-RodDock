@@ -159,11 +159,11 @@ module round_profile(x, y, radius, crn_radius)
 
         // keyhole to cut out.
         translate([x/2,y/2,0])
-        union()
+        hull()
         {
             circle(radius);
-            translate([-radius,-RND_RECT_OFFSET,0])
-            rect_outline(d,y,crn_radius,true);
+            translate([0,radius+(radius/2),0])
+            circle(radius);
         }
     }
 }
