@@ -2,7 +2,7 @@
 
 A collaborative engineering workspace between Ken and ChatGPT.
 
-## KCP-26002–RodDock
+## KCP-26001–RodDock
 
 RodDock is a modular 3D-printable accessory mounting system for small boats. It consists of a standardized rail, a universal adapter, and ### Project Plan
 
